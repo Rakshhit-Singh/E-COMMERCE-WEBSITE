@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'New Tegomin', serif;
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 150px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative
+}
+
+.nav-links ul li a {
+    color: #EC1B32;
+    text-decoration: none;
+    font-size: 20px
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.text-box {
+    width: 90%;
+    color: #EC1B32;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 62px;
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #EC1B32
+}
+
+.btn1 {
+    display: inline-block;
+    text-decoration: none;
+    color: #EC1B32;
+    border: 1px solid #EC1B32;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.btn1:hover {
+    border: 1px solid #fff;
+    background: #fff;
+    transition: 1s;
+}
+
+.btn2 {
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #EC1B32;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.btn2:hover {
+    border: 1px solid #fff;
+    background: #EC1B32;
+    transition: 1s;
+}
+
+nav .fa {
+    display: none;
+}
+
+@media(max-width: 700px) {
+    .text-box h1 {
+        font-size: 20px;
+    }
+
+    .nav-links ul li {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        background: #fff;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    nav .fa {
+        display: block;
+        color: #EC1B32;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+
+    .nav-links ul {
+        padding: 30px;
+    }
+}
+
+.shop{
+    background-color:#fff;
+}
+
+.products{
+    display: flex;
+    justify-content: center;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 18%;
+    border-radius: 5px;
+    margin: 2%;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+img {
+    border-radius: 5px 5px 0 0;
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    padding: 10px;
+    width: 280px;
+    left: 50%;
+    margin-left: -150px;
+    height: 180px;
+    top: 50%;
+    margin-top: -100px;
+    background: #FFF;
+    border: 3px solid #F04A49;
+    z-index: 20;
+  }
+  
+  #popup:after {
+    position: fixed;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: -2;
+  }
+  
+  #popup:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #FFF;
+    z-index: -1;
+  }
+
+.location {
+    background-color:#fff;
+}
+
+.about {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+    background-color:#fff;
+}
+
+.about h1 {
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.socials .fa {
+    color: #EC1B32;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+
+.info {
+    width: 100%;
+    padding: 30px 0;
+    margin-left: 10px;
+}
+
+.info h1 {
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}

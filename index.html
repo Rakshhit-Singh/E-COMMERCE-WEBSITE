@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>Formidable</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" href="images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("a").on('click', function (event) {
+
+                if (this.hash !== "") {
+                    event.preventDefault();
+
+                    var hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+        $ = function (id) {
+            return document.getElementById(id);
+        }
+
+        var show = function (id) {
+            $(id).style.display = 'block';
+        }
+        var hide = function (id) {
+            $(id).style.display = 'none';
+        }
+    </script>
+    <style media="screen">
+        body {
+            background-image: linear-gradient(to right, dodgerblue, darkblue);
+        }
+    </style>
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/logo2.png"></a>
+            <div class="nav-links" id="navLink">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="#shop">SHOP</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="pages/account.html">ACCOUNT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <div class="text-box">
+            <h1>Dress like you’re already famous</h1>
+            <p>"I like my money right where I can see it ... hanging in my closet." <br>
+                —Carrie Bradshaw
+
+            </p>
+            <a href="#location" class="btn1">Visit us to know more</a>
+        </div>
+    </section>
+
+    <div class="shop" id='shop'>
+        <center>
+            <h1>BEST SELLING PRODUCTS</h1>
+
+            <div class="products">
+                <div class="card">
+                    <img src="images/glasses.jpg" alt="Avatar" style="height: 100%; width: 100%;">
+                    <div class="container">
+                        <h4><button class="button" href="#" onclick="show('popup')">SPECTACLES</button></h4>
+                    </div>
+                </div>
+
+                <div class="popup" id="popup">
+                    <a href="">Add to cart!</a><br>
+                    <h4>$100</h4>
+                    <a href="#shop" onclick="hide('popup')">Close</a>
+                </div>
+
+
+                <div class="card">
+                    <img src="images/headphone.jpg" alt="Avatar" style="height: 100%; width: 100%;">
+                    <div class="container">
+                        <h4><button class="button" href="#" onclick="show('popup')">HEADPHONES</button></h4>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <img src="images/mask.jpg" alt="Avatar" style="height: 100%; width: 100%;">
+                    <div class="container">
+                        <h4><button class="button" href="#" onclick="show('popup')">MASKS</button></h4>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <img src="images/watch.jpg" alt="Avatar" style="height: 100%; width: 100%;">
+                    <div class="container">
+                        <h4><button class="button" href="#" onclick="show('popup')">WATCHES</button></h4>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <img src="images/hoodie.jpg" alt="Avatar" style="height: 100%; width: 100%;">
+                    <div class="container">
+                        <h4><button class="button" href="#" onclick="show('popup')">HOODIES</button></h4>
+                    </div>
+                </div>
+            </div>
+
+            <a href="pages/shop.html" class="btn2">Check out more of our prodcuts</a>
+        </center>
+
+    </div>
+
+    <div class='location' id="location">
+        <center>
+            <h1>VISIT US</h1>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7479810.137016703!2d70.62626780598976!3d23.738425583093367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9cf723a351b%3A0x24a56735a81c48b7!2sLogitech%20India%20Private%20Limited%20-%20Mumbai%20Office!5e0!3m2!1sen!2sin!4v1666198799360!5m2!1sen!2sin"
+                width="600" height="450" style="border: 10px; margin: 20px;;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </center>
+    </div>
+
+    <div class="about" id="about">
+        <h1>ABOUT US</h1>
+        <p>The Formidable community is driven by a shared purpose: to make the common folk <br>
+            more fashionable. We are fun and quirky, elite but not elitist, <br>
+            inventive and artistic, obsessed with numbers, and welcoming to everybody <br>
+            regardless of where they come from.
+        </p>
+        <div class="socials">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+        <p>MADE BY RITIK SINGH</p>
+    </div>
+    <script>
+        var navLinks = document.getElementById('navLink');
+        function showMenu() {
+            navLinks.style.right = '0';
+        }
+        function hideMenu() {
+            navLinks.style.right = '-200px';
+        }
+    </script>
+</body>
+
+</html>
